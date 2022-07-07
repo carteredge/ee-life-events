@@ -715,7 +715,7 @@ const data = {
                 restrictedTags: ["war"],
             },
         ],
-        n: { range: [3, 10] },
+        p: 0.6,
     },
     alternateDimension: [
         "the dream realm",
