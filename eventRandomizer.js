@@ -1,4 +1,4 @@
-const EVENT_BASE_PROBABILITY = 0.8;
+const EVENT_BASE_PROBABILITY = 0.5;
 
 function randomize() {
     document.getElementById("randomizer-target").innerHTML = `<li>${randomizeFromTagTree()
