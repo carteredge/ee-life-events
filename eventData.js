@@ -217,6 +217,11 @@ const warOutcomes = [
 const data = {
     history:
     {
+        options: {
+            capitalize: false,
+            forceNew: true,
+        },
+        p: 0.6,
         tree: [
             { // apprentice
                 value: "They took an apprenticeship with {craft}.",
@@ -411,7 +416,7 @@ const data = {
                 requiredTags: ["quest", "adult"],
                 restrictedTags: ["questFailed", "questSucceeded"]
             },
-            {  //  father died
+            {  // father died
                 value: "Their father {death}.",
                 tags: ["fatherIsGone", "fatherDead"],
                 requiredTags: ["adolescent"],
@@ -715,7 +720,6 @@ const data = {
                 restrictedTags: ["war"],
             },
         ],
-        p: 0.6,
     },
     alternateDimension: [
         "the dream realm",
