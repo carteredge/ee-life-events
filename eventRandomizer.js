@@ -2,8 +2,6 @@ const EVENT_BASE_PROBABILITY = 0.5;
 
 function randomize() {
     const randomizedData = new Randomizer(data, ["history"]).randomize();
-    console.log(randomizedData);
-
     document.getElementById("randomizer-target").innerHTML = `<li>${
         randomizedData.history
         .join("</li><li>")}</li>`;

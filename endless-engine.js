@@ -43,23 +43,12 @@ class Randomizer {
                     break;
                 randomizedTreeData.push(outcomeEvent);
             }
-            keepGoing = options?.count ? 
-                randomizedTreeData.length < options.count
+            keepGoing = options?.n ? 
+                randomizedTreeData.length < options.n
                 : options?.p ?
                     Math.random() <= options.p
                     : false;
         } while (keepGoing);
-    
-        // for (let node of randomizedTreeData) {
-        //     let prevString;
-        //     let value = node.value;
-        //     do {
-        //         prevString = value;
-        //         value = value.replace(/\{(\w+)\}/g, (m, g) => 
-        //             Randomizer.randElem(nodeData[g]));
-        //     } while (value != prevString);
-        //     node.value = value;
-        // }
     
         return randomizedTreeData; // .map(n => this.randomize(n));
     }
@@ -540,8 +529,8 @@ class RandomizerField {
             return Randomizer.randomizeFromTagTree(
                 dataSet.tree,
                 {
-                    count: dataSet.count,
-                    p: dataSet.p
+                    n: dataSet.n ? this.randomizeValue(dataSet.n) : 0,
+                    p: dataSet.p ? this.randomizeValue(dataSet.p) : 0
                 }
             );
 
